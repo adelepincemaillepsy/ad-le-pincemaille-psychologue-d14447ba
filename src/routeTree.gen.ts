@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TarifContactRouteImport } from './routes/tarif-contact'
+import { Route as RendezVousRouteImport } from './routes/rendez-vous'
+import { Route as PourQuiRouteImport } from './routes/pour-qui'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TarifContactRoute = TarifContactRouteImport.update({
+  id: '/tarif-contact',
+  path: '/tarif-contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RendezVousRoute = RendezVousRouteImport.update({
+  id: '/rendez-vous',
+  path: '/rendez-vous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PourQuiRoute = PourQuiRouteImport.update({
+  id: '/pour-qui',
+  path: '/pour-qui',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pour-qui': typeof PourQuiRoute
+  '/rendez-vous': typeof RendezVousRoute
+  '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pour-qui': typeof PourQuiRoute
+  '/rendez-vous': typeof RendezVousRoute
+  '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pour-qui': typeof PourQuiRoute
+  '/rendez-vous': typeof RendezVousRoute
+  '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
+  id: '__root__' | '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PourQuiRoute: typeof PourQuiRoute
+  RendezVousRoute: typeof RendezVousRoute
+  TarifContactRoute: typeof TarifContactRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tarif-contact': {
+      id: '/tarif-contact'
+      path: '/tarif-contact'
+      fullPath: '/tarif-contact'
+      preLoaderRoute: typeof TarifContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rendez-vous': {
+      id: '/rendez-vous'
+      path: '/rendez-vous'
+      fullPath: '/rendez-vous'
+      preLoaderRoute: typeof RendezVousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pour-qui': {
+      id: '/pour-qui'
+      path: '/pour-qui'
+      fullPath: '/pour-qui'
+      preLoaderRoute: typeof PourQuiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PourQuiRoute: PourQuiRoute,
+  RendezVousRoute: RendezVousRoute,
+  TarifContactRoute: TarifContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
