@@ -92,9 +92,9 @@ function HomePage() {
         <article className="container-narrow py-20 sm:py-28">
           <header className="text-center max-w-2xl mx-auto">
             <p className="text-xs uppercase tracking-[0.3em] text-accent">Pour qui ?</p>
-            <h2 className="mt-4 font-serif text-5xl sm:text-6xl text-foreground">À qui je m'adresse</h2>
+            <h2 className="mt-4 font-serif sm:text-6xl text-foreground text-4xl">À qui je m'adresse</h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Adultes, adolescents et enfants à partir de 12 ans.
+              Tarif et contact
             </p>
           </header>
 
