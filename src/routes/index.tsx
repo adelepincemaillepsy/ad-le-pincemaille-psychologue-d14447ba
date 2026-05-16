@@ -41,20 +41,6 @@ function HomePage() {
             Adèle Pincemaille, psychologue clinicienne.<br />
             Accompagnement des adultes, adolescents et enfants à partir de 12 ans.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link
-              to="/rendez-vous"
-              className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
-            >
-              Prendre rendez-vous
-            </Link>
-            <a
-              href="#pour-qui"
-              className="inline-flex items-center justify-center rounded-md border border-input bg-background/60 px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-secondary"
-            >
-              Découvrir l'approche
-            </a>
-          </div>
         </div>
       </section>
 
