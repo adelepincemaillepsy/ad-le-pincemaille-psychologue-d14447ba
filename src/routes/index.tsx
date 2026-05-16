@@ -32,7 +32,7 @@ function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
         <div className="container-narrow relative py-20 sm:py-28 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-accent">Cabinet de Vendenheim</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-accent">Cabinet à Vendenheim</p>
           <h1 className="mt-6 font-serif text-5xl sm:text-6xl text-foreground leading-tight">
             Un espace de parole,<br />
             <em className="text-accent not-italic">d'écoute et de soin.</em>
