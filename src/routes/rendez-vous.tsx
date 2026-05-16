@@ -16,11 +16,11 @@ export const Route = createFileRoute("/rendez-vous")({
   component: RendezVousPage,
 });
 
-// Démo : créneaux disponibles par jour de la semaine (mardi=2, mercredi=3, jeudi=4)
+// Créneaux disponibles : mardi 13h30–20h, mercredi 8h–20h, jeudi 8h–13h30
 const AVAILABLE_SLOTS_BY_DAY: Record<number, string[]> = {
-  2: ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00"],
-  3: ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"],
-  4: ["09:00", "10:00", "11:00", "14:00", "15:00", "17:00", "18:00"],
+  2: ["13:30", "14:30", "15:30", "16:30", "17:30", "18:30"],
+  3: ["08:00", "09:00", "10:00", "11:00", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30"],
+  4: ["08:00", "09:00", "10:00", "11:00", "12:00"],
 };
 
 const DAY_LABELS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
