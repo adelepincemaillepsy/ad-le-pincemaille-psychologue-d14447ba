@@ -69,7 +69,7 @@ function HomePage() {
               </p>
             </div>
           </div>
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 mx-auto w-full max-w-[260px] md:max-w-[300px]">
             <div className="relative">
               <div className="absolute -inset-3 -z-10 rounded-lg bg-accent/15 translate-x-3 translate-y-3" />
               <img
