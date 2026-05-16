@@ -158,6 +158,37 @@ function HomePage() {
                 permettant aux étudiants de bénéficier de séances prises en charge.
               </p>
             </div>
+            <div className="rounded-lg border border-border/60 bg-card p-8">
+              <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
+              <div className="mt-4 space-y-3 text-sm text-foreground/85">
+                <p className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                  <span>19 rue de la Forêt<br />67550 Vendenheim</span>
+                </p>
+                <p className="text-muted-foreground italic">
+                  [Espace à compléter — précisions sur l'accès, stationnement, transports en
+                  commun, étage, accessibilité.]
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-border/60 bg-card p-8">
+              <h3 className="font-serif text-2xl text-foreground">Moyens de paiement</h3>
+              <ul className="mt-4 space-y-3 text-sm text-foreground/85">
+                <li className="flex items-center gap-3">
+                  <CreditCard className="h-4 w-4 text-accent" />
+                  Carte bancaire acceptée
+                </li>
+                <li className="flex items-center gap-3">
+                  <Banknote className="h-4 w-4 text-accent" />
+                  Espèces acceptées
+                </li>
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <XCircle className="h-4 w-4" />
+                  Chèques non acceptés
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Cabinet — photos */}
@@ -190,41 +221,6 @@ function HomePage() {
                   Bureau de consultation — [remplacer par votre photo]
                 </figcaption>
               </figure>
-            </div>
-          </div>
-
-          {/* Accès & paiement */}
-          <div className="mt-20 grid gap-6 md:grid-cols-2">
-            <div className="rounded-lg border border-border/60 bg-card p-8">
-              <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
-              <div className="mt-4 space-y-3 text-sm text-foreground/85">
-                <p className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>19 rue de la Forêt<br />67550 Vendenheim</span>
-                </p>
-                <p className="text-muted-foreground italic">
-                  [Espace à compléter — précisions sur l'accès, stationnement, transports en
-                  commun, étage, accessibilité.]
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-lg border border-border/60 bg-card p-8">
-              <h3 className="font-serif text-2xl text-foreground">Moyens de paiement</h3>
-              <ul className="mt-4 space-y-3 text-sm text-foreground/85">
-                <li className="flex items-center gap-3">
-                  <CreditCard className="h-4 w-4 text-accent" />
-                  Carte bancaire acceptée
-                </li>
-                <li className="flex items-center gap-3">
-                  <Banknote className="h-4 w-4 text-accent" />
-                  Espèces acceptées
-                </li>
-                <li className="flex items-center gap-3 text-muted-foreground">
-                  <XCircle className="h-4 w-4" />
-                  Chèques non acceptés
-                </li>
-              </ul>
             </div>
           </div>
 
