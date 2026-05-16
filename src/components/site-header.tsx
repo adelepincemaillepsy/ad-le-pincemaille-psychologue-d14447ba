@@ -1,4 +1,5 @@
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const sections = [
   { id: "presentation", label: "Présentation" },
