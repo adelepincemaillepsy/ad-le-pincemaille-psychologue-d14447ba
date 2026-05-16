@@ -101,24 +101,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Valeurs */}
-      <section className="border-t border-border/60 bg-secondary/40">
-        <div className="container-narrow py-20">
-          <div className="grid gap-10 sm:grid-cols-3">
-            {[
-              { title: "Confidentialité", text: "Un espace protégé, soumis au secret professionnel." },
-              { title: "Bienveillance", text: "Une écoute sans jugement, respectueuse de votre rythme." },
-              { title: "Engagement", text: "Un accompagnement adapté à chaque histoire singulière." },
-            ].map((v) => (
-              <div key={v.title} className="text-center">
-                <h3 className="font-serif text-2xl text-foreground">{v.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pour qui */}
       <section id="pour-qui" className="border-t border-border/60 scroll-mt-24">
         <article className="container-narrow py-20 sm:py-28">
