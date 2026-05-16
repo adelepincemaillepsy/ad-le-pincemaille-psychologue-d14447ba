@@ -16,7 +16,7 @@ export function SiteFooter() {
           <div className="space-y-3 text-sm text-foreground/80">
             <p className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <span>19 rue de la Forêt<br />67550 Vendenheim</span>
+              <span>Espace Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
             </p>
             <p className="flex items-center gap-3">
               <Phone className="h-4 w-4 shrink-0 text-accent" />
