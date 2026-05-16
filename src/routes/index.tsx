@@ -55,16 +55,6 @@ function HomePage() {
               Découvrir l'approche
             </a>
           </div>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-accent" />
-              19 rue de la Forêt, 67550 Vendenheim
-            </span>
-            <a href="tel:+33000000000" className="flex items-center gap-2 hover:text-foreground transition-colors">
-              <Phone className="h-4 w-4 text-accent" />
-              (numéro pro)
-            </a>
-          </div>
         </div>
       </section>
 
