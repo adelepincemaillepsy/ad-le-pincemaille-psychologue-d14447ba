@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TarifContactRouteImport } from './routes/tarif-contact'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RendezVousRouteImport } from './routes/rendez-vous'
 import { Route as PourQuiRouteImport } from './routes/pour-qui'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TarifContactRoute = TarifContactRouteImport.update({
   id: '/tarif-contact',
   path: '/tarif-contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RendezVousRoute = RendezVousRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/pour-qui': typeof PourQuiRoute
   '/rendez-vous': typeof RendezVousRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/pour-qui': typeof PourQuiRoute
   '/rendez-vous': typeof RendezVousRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/pour-qui': typeof PourQuiRoute
   '/rendez-vous': typeof RendezVousRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tarif-contact': typeof TarifContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
+  fullPaths:
+    | '/'
+    | '/pour-qui'
+    | '/rendez-vous'
+    | '/sitemap.xml'
+    | '/tarif-contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
-  id: '__root__' | '/' | '/pour-qui' | '/rendez-vous' | '/tarif-contact'
+  to: '/' | '/pour-qui' | '/rendez-vous' | '/sitemap.xml' | '/tarif-contact'
+  id:
+    | '__root__'
+    | '/'
+    | '/pour-qui'
+    | '/rendez-vous'
+    | '/sitemap.xml'
+    | '/tarif-contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PourQuiRoute: typeof PourQuiRoute
   RendezVousRoute: typeof RendezVousRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TarifContactRoute: typeof TarifContactRoute
 }
 
@@ -76,6 +97,13 @@ declare module '@tanstack/react-router' {
       path: '/tarif-contact'
       fullPath: '/tarif-contact'
       preLoaderRoute: typeof TarifContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rendez-vous': {
@@ -106,6 +134,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PourQuiRoute: PourQuiRoute,
   RendezVousRoute: RendezVousRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TarifContactRoute: TarifContactRoute,
 }
 export const routeTree = rootRouteImport

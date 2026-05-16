@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adelepincemaille-psychologue.fr/sitemap.xml
