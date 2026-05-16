@@ -38,7 +38,7 @@ function HomePage() {
             <em className="text-accent not-italic">d'écoute et de soin.</em>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground leading-relaxed">
-            Adèle Pincemaille, psychologue clinicienne.<br />
+            <span className="font-serif text-xl text-foreground tracking-wide">Adèle Pincemaille</span>, psychologue clinicienne.<br />
             Accompagnement des adultes, adolescents et enfants à partir de 12 ans.
           </p>
         </div>
