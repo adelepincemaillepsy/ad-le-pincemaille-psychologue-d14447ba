@@ -243,8 +243,7 @@ function HomePage() {
           <div className="mt-20 rounded-lg bg-primary p-10 text-primary-foreground">
             <h3 className="font-serif text-3xl text-center">Me contacter</h3>
             <p className="mt-4 text-center text-sm leading-relaxed text-primary-foreground/80 max-w-2xl mx-auto">
-              Vous pouvez demander un rendez-vous ou toute autre information par
-              appel, par mail, ou directement via la prise de rendez-vous en ligne.
+              Prise de rendez-vous possible par téléphone ou via la plateforme en ligne.
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <a
