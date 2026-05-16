@@ -158,20 +158,10 @@ function HomePage() {
                 permettant aux étudiants de bénéficier de séances prises en charge.
               </p>
             </div>
-            <div className="rounded-lg border border-border/60 bg-card p-8">
-              <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
-              <div className="mt-4 space-y-3 text-sm text-foreground/85">
-                <p className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>19 rue de la Forêt<br />67550 Vendenheim</span>
-                </p>
-                <p className="text-muted-foreground italic">
-                  [Espace à compléter — précisions sur l'accès, stationnement, transports en
-                  commun, étage, accessibilité.]
-                </p>
-              </div>
-            </div>
+          </div>
 
+          {/* Moyens de paiement + Annulation */}
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
             <div className="rounded-lg border border-border/60 bg-card p-8">
               <h3 className="font-serif text-2xl text-foreground">Moyens de paiement</h3>
               <ul className="mt-4 space-y-3 text-sm text-foreground/85">
@@ -189,10 +179,35 @@ function HomePage() {
                 </li>
               </ul>
             </div>
+
+            <div className="rounded-lg border border-accent/30 bg-accent/5 p-8">
+              <h3 className="font-serif text-2xl text-foreground">Annulation</h3>
+              <p className="mt-4 text-sm leading-relaxed text-foreground/85">
+                Toute consultation non honorée ou annulée moins de 48h à l'avance reste due.
+                Ce cadre me permet de vous accueillir dans de bonnes conditions et de
+                préserver un fonctionnement respectueux pour chacun·e. Merci pour votre
+                compréhension.
+              </p>
+            </div>
+          </div>
+
+          {/* Accès au cabinet */}
+          <div className="mt-12 rounded-lg border border-border/60 bg-card p-8">
+            <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
+            <div className="mt-4 space-y-3 text-sm text-foreground/85">
+              <p className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span>19 rue de la Forêt<br />67550 Vendenheim</span>
+              </p>
+              <p className="text-muted-foreground italic">
+                [Espace à compléter — précisions sur l'accès, stationnement, transports en
+                commun, étage, accessibilité.]
+              </p>
+            </div>
           </div>
 
           {/* Cabinet — photos */}
-          <div className="mt-20">
+          <div className="mt-12">
             <h3 className="font-serif text-3xl text-foreground text-center">Le cabinet</h3>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               <figure>
@@ -222,17 +237,6 @@ function HomePage() {
                 </figcaption>
               </figure>
             </div>
-          </div>
-
-          {/* Annulation */}
-          <div className="mt-12 rounded-lg border border-accent/30 bg-accent/5 p-8">
-            <h3 className="font-serif text-2xl text-foreground">Annulation</h3>
-            <p className="mt-4 text-sm leading-relaxed text-foreground/85">
-              Toute consultation non honorée ou annulée moins de 48h à l'avance reste due.
-              Ce cadre me permet de vous accueillir dans de bonnes conditions et de
-              préserver un fonctionnement respectueux pour chacun·e. Merci pour votre
-              compréhension.
-            </p>
           </div>
 
           {/* Contact */}
