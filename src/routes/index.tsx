@@ -50,7 +50,7 @@ function HomePage() {
           <div className="order-2 md:order-1">
             <p className="text-xs uppercase tracking-[0.3em] text-accent">Présentation</p>
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
-              À propos de moi
+              À mon propos
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85">
               <p>
