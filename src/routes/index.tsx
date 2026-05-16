@@ -90,7 +90,7 @@ function HomePage() {
       {/* Pour qui */}
       <section id="pour-qui" className="border-t border-border/60 scroll-mt-24">
         <article className="container-narrow py-20 sm:py-28">
-          <header className="text-center max-w-2xl mx-auto">
+          <header className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.3em] text-accent">Pour qui ?</p>
             <h2 className="mt-4 font-serif text-5xl sm:text-6xl text-foreground">À qui je m'adresse</h2>
             <p className="mt-6 text-lg text-muted-foreground">
