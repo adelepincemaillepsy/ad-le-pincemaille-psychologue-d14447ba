@@ -5,8 +5,6 @@ const BASE_URL = "https://adelepincemaille-psychologue.fr";
 
 const entries = [
   { path: "/", changefreq: "monthly", priority: "1.0" },
-  { path: "/pour-qui", changefreq: "monthly", priority: "0.8" },
-  { path: "/tarif-contact", changefreq: "monthly", priority: "0.8" },
   { path: "/rendez-vous", changefreq: "weekly", priority: "0.9" },
 ];
 
