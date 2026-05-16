@@ -1,22 +1,33 @@
-import { Link } from "@tanstack/react-router";
-import { ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 
-const menuItems = [
-  { to: "/", label: "Présentation" },
-  { to: "/pour-qui", label: "Pour qui ?" },
-  { to: "/tarif-contact", label: "Tarif et contact" },
+const sections = [
+  { id: "presentation", label: "Présentation" },
+  { id: "pour-qui", label: "Pour qui ?" },
+  { id: "tarif-contact", label: "Tarif et contact" },
 ] as const;
 
 export function SiteHeader() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const onHome = location.pathname === "/";
+
+  const handleAnchor = (e: React.MouseEvent, id: string) => {
+    if (onHome) {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", `#${id}`);
+      }
+    } else {
+      e.preventDefault();
+      navigate({ to: "/", hash: id });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="container-wide flex h-20 items-center justify-between">
+      <div className="container-wide flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex flex-col leading-tight">
           <span className="font-serif text-xl text-foreground">Adèle Pincemaille</span>
           <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
@@ -24,27 +35,20 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="flex items-center gap-2 sm:gap-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-              Menu
-              <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              {menuItems.map((item) => (
-                <DropdownMenuItem key={item.to} asChild>
-                  <Link
-                    to={item.to}
-                    className="cursor-pointer text-sm"
-                    activeProps={{ className: "bg-secondary font-medium" }}
-                    activeOptions={{ exact: true }}
-                  >
-                    {item.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+        <nav className="flex items-center gap-1 sm:gap-2">
+          <ul className="hidden md:flex items-center gap-1">
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a
+                  href={`/#${s.id}`}
+                  onClick={(e) => handleAnchor(e, s.id)}
+                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-foreground"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
           <Link
             to="/rendez-vous"
@@ -54,6 +58,23 @@ export function SiteHeader() {
           </Link>
         </nav>
       </div>
+
+      {/* Mobile nav */}
+      <nav className="md:hidden border-t border-border/60 bg-background/60">
+        <ul className="container-wide flex items-center justify-between gap-1 py-2 overflow-x-auto">
+          {sections.map((s) => (
+            <li key={s.id}>
+              <a
+                href={`/#${s.id}`}
+                onClick={(e) => handleAnchor(e, s.id)}
+                className="inline-flex items-center rounded-md px-2.5 py-1.5 text-xs font-medium text-foreground/80 whitespace-nowrap hover:bg-secondary"
+              >
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }
