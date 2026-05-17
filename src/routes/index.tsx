@@ -95,29 +95,24 @@ function HomePage() {
             <h2 className="mt-4 font-serif sm:text-6xl text-foreground text-4xl">À qui je m'adresse</h2>
           </header>
 
-          <div className="mt-16 space-y-12 text-base leading-relaxed text-foreground/85">
+          <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85">
             <p className="text-muted-foreground italic">
               [Espace à compléter — vous pouvez détailler ici votre pratique, le public
               accompagné, vos spécialisations.]
             </p>
-
-            <p className="text-xl font-serif leading-relaxed text-foreground">
+            <p>
               Mon travail s'adresse aux personnes qui ressentent le besoin d'entamer un
               travail psychothérapeutique, qu'elles traversent une période de mal-être, de
               tristesse, d'angoisse, de dépression, de souffrance psychique, qu'elles soient
               confrontées à un événement traumatique ou qu'elles aient le sentiment d'être
               dans une impasse plus diffuse, parfois difficile à saisir.
             </p>
-
-            <div className="rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10">
-              <p>
-                Il peut arriver qu'un ou plusieurs symptômes prennent trop de place dans la
-                vie quotidienne et aient un impact sur la vie privée, affective ou
-                professionnelle. Dans ces cas la psychothérapie peut s'avérer être un
-                véritable levier de changement et de soulagement.
-              </p>
-            </div>
-
+            <p>
+              Il peut arriver qu'un ou plusieurs symptômes prennent trop de place dans la
+              vie quotidienne et aient un impact sur la vie privée, affective ou
+              professionnelle. Dans ces cas la psychothérapie peut s'avérer être un
+              véritable levier de changement et de soulagement.
+            </p>
             <p>
               Mon travail consiste à proposer un espace de parole et d'écoute, confidentiel,
               bienveillant et sans jugement. Un espace où ce qui fait souffrance peut se
