@@ -132,8 +132,8 @@ function HomePage() {
         <article className="container-narrow py-20 sm:py-28">
           <header className="text-center max-w-2xl mx-auto">
             <p className="uppercase tracking-[0.3em] text-accent text-xs">Informations pratiques</p>
-            <h2 className="mt-4 font-serif text-5xl sm:text-6xl text-foreground">
-              {"\n"}
+            <h2 className="mt-4 font-serif text-4xl text-foreground text-center">
+              Tarif et contact
             </h2>
           </header>
 
