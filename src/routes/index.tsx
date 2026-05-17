@@ -93,9 +93,6 @@ function HomePage() {
           <header className="text-center max-w-2xl mx-auto">
             <p className="text-xs uppercase tracking-[0.3em] text-accent">Pour qui ?</p>
             <h2 className="mt-4 font-serif sm:text-6xl text-foreground text-4xl">À qui je m'adresse</h2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Tarif et contact
-            </p>
           </header>
 
           <div className="mt-16 space-y-12 text-base leading-relaxed text-foreground/85">
