@@ -95,7 +95,7 @@ function HomePage() {
             <h2 className="mt-4 font-serif sm:text-6xl text-foreground text-4xl">À qui je m'adresse</h2>
           </header>
 
-          <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85">
+          <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
             <p className="text-muted-foreground italic">
               [Espace à compléter — vous pouvez détailler ici votre pratique, le public
               accompagné, vos spécialisations.]
