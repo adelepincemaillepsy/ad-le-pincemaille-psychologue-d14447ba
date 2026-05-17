@@ -96,9 +96,8 @@ function HomePage() {
           </header>
 
           <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
-            <p className="text-muted-foreground italic">
-              [Espace à compléter — vous pouvez détailler ici votre pratique, le public
-              accompagné, vos spécialisations.]
+            <p>
+              J'accompagne les adultes, les adolescents et les enfants à partir de 12 ans.
             </p>
             <p>
               Mon travail s'adresse aux personnes qui ressentent le besoin d'entamer un
