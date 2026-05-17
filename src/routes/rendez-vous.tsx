@@ -44,10 +44,13 @@ function addDays(d: Date, n: number) {
   return x;
 }
 
+const OPENING_DATE = new Date(2026, 5, 1); // 1er juin 2026
+
 function isPast(d: Date) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  return d < today;
+  const min = today < OPENING_DATE ? OPENING_DATE : today;
+  return d < min;
 }
 
 function formatRange(start: Date) {
