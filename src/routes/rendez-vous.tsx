@@ -63,7 +63,10 @@ function formatRange(start: Date) {
 }
 
 function RendezVousPage() {
-  const [weekStart, setWeekStart] = useState(() => startOfWeek(new Date()));
+  const [weekStart, setWeekStart] = useState(() => {
+    const now = new Date();
+    return startOfWeek(now < OPENING_DATE ? OPENING_DATE : now);
+  });
   const [selected, setSelected] = useState<{ date: Date; time: string } | null>(null);
 
   const days = useMemo(
