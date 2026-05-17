@@ -182,21 +182,6 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Accès au cabinet */}
-          <div className="mt-12 rounded-lg border border-border/60 bg-card p-8">
-            <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
-            <div className="mt-4 space-y-3 text-sm text-foreground/85">
-              <p className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>19 rue de la Forêt<br />67550 Vendenheim</span>
-              </p>
-              <p className="text-muted-foreground italic">
-                [Espace à compléter — précisions sur l'accès, stationnement, transports en
-                commun, étage, accessibilité.]
-              </p>
-            </div>
-          </div>
-
           {/* Cabinet — photos */}
           <div className="mt-12">
             <h3 className="font-serif text-3xl text-foreground text-center">Le cabinet</h3>
@@ -227,6 +212,21 @@ function HomePage() {
                   Bureau de consultation — [remplacer par votre photo]
                 </figcaption>
               </figure>
+            </div>
+          </div>
+
+          {/* Accès au cabinet */}
+          <div className="mt-12 rounded-lg border border-border/60 bg-card p-8">
+            <h3 className="font-serif text-2xl text-foreground">Accès au cabinet</h3>
+            <div className="mt-4 space-y-3 text-sm text-foreground/85">
+              <p className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span>19 rue de la Forêt<br />67550 Vendenheim</span>
+              </p>
+              <p className="text-muted-foreground italic">
+                [Espace à compléter — précisions sur l'accès, stationnement, transports en
+                commun, étage, accessibilité.]
+              </p>
             </div>
           </div>
 
