@@ -134,9 +134,9 @@ function HomePage() {
       <section id="tarif-contact" className="border-t border-border/60 bg-secondary/20 scroll-mt-24">
         <article className="container-narrow py-20 sm:py-28">
           <header className="text-center max-w-2xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.3em] text-accent">Informations pratiques</p>
+            <p className="uppercase tracking-[0.3em] text-accent text-xs">Informations pratiques</p>
             <h2 className="mt-4 font-serif text-5xl sm:text-6xl text-foreground">
-              Tarif et contact
+              {"\n"}
             </h2>
           </header>
 
