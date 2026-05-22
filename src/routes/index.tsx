@@ -54,18 +54,7 @@ function HomePage() {
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85">
               <p>
-                Psychologue clinicienne diplômée, je reçois en cabinet à Vendenheim dans
-                un cadre confidentiel et bienveillant.
-              </p>
-              <p className="text-muted-foreground italic">
-                [Espace à compléter — présentez ici votre parcours, vos études, vos
-                expériences et votre approche thérapeutique. Ce texte est entièrement
-                modifiable.]
-              </p>
-              <p className="text-muted-foreground italic">
-                [Exemple : Diplômée d'un Master en psychologie clinique et
-                psychopathologie de l'Université de…, j'ai exercé en institution
-                pendant plusieurs années avant d'ouvrir mon cabinet en…]
+                Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse. J'exerce en cabinet au pôle santé de Vendenheim, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires, tout en poursuivant une activité en institution, en psychiatrie adulte.
               </p>
             </div>
           </div>
