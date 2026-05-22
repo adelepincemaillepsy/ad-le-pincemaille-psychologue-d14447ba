@@ -100,10 +100,10 @@ function RendezVousPage() {
           </div>
         </div>
         <a
-          href="tel:+33000000000"
+          href="tel:+33749217835"
           className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
         >
-          (numéro pro)
+          07 49 21 78 35
         </a>
       </div>
 
@@ -239,10 +239,10 @@ function RendezVousPage() {
                   Confirmer par email
                 </a>
                 <a
-                  href="tel:+33000000000"
+                  href="tel:+33749217835"
                   className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
                 >
-                  Appeler
+                  07 49 21 78 35
                 </a>
               </div>
             </div>
