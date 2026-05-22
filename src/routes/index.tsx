@@ -238,13 +238,13 @@ function HomePage() {
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <a
-                href="tel:+33000000000"
+                href="tel:+33749217835"
                 className="flex items-center gap-4 rounded-md bg-primary-foreground/5 p-5 transition-colors hover:bg-primary-foreground/10"
               >
                 <Phone className="h-5 w-5" />
                 <div>
                   <p className="text-xs uppercase tracking-[0.15em] opacity-70">Téléphone</p>
-                  <p className="mt-1 text-sm">(numéro pro)</p>
+                  <p className="mt-1 text-sm">07 49 21 78 35</p>
                 </div>
               </a>
               <a
