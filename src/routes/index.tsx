@@ -128,7 +128,7 @@ function HomePage() {
               <p className="text-xs uppercase tracking-[0.2em] text-accent">Dispositif</p>
               <h3 className="mt-3 font-serif text-3xl text-foreground">Prise en charge</h3>
               <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-                Les consultations ne sont actuellement pas prises en charge dans le cadre des dispositifs Mon Soutien Psy et Santé Psy Étudiant.
+                Les consultations ne sont actuellement <strong>pas prises en charge</strong> dans le cadre des dispositifs Mon Soutien Psy et Santé Psy Étudiant.
               </p>
             </div>
           </div>
