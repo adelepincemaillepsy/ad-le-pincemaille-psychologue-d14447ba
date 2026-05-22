@@ -97,25 +97,16 @@ function HomePage() {
 
           <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
             <p>
-              J'accompagne les adultes, les adolescents et les enfants à partir de 12 ans.
+              J'accompagne en psychothérapie les adultes, les adolescents ainsi que les enfants à partir de 12 ans.
             </p>
             <p>
-              Mon travail s'adresse aux personnes qui ressentent le besoin d'entamer un
-              travail psychothérapeutique, qu'elles traversent une période de mal-être, de
-              tristesse, d'angoisse, de dépression, de souffrance psychique, qu'elles soient
-              confrontées à un événement traumatique ou qu'elles aient le sentiment d'être
-              dans une impasse plus diffuse, parfois difficile à saisir.
+              Les consultations s'adressent aux personnes qui ressentent le besoin d'entreprendre un travail thérapeutique, qu'elles traversent une période de mal-être, d'anxiété, de tristesse, de dépression ou de souffrance psychique, qu'elles soient confrontées à un événement traumatique ou à un sentiment plus diffus d'impasse ou de difficulté intérieure.
             </p>
             <p>
-              Il peut arriver qu'un ou plusieurs symptômes prennent trop de place dans la
-              vie quotidienne et aient un impact sur la vie privée, affective ou
-              professionnelle. Dans ces cas la psychothérapie peut s'avérer être un
-              véritable levier de changement et de soulagement.
+              Lorsque certains symptômes ou difficultés prennent une place importante dans le quotidien et impactent la vie personnelle, affective, scolaire ou professionnelle, la psychothérapie peut offrir un espace de compréhension, d'apaisement et de changement.
             </p>
             <p>
-              Mon travail consiste à proposer un espace de parole et d'écoute, confidentiel,
-              bienveillant et sans jugement. Un espace où ce qui fait souffrance peut se
-              dire, se déposer, et peu à peu se remanier.
+              Je propose un cadre confidentiel, bienveillant et sans jugement, où la parole peut se déposer librement et où ce qui fait souffrance peut progressivement être mis en sens et travaillé.
             </p>
           </div>
         </article>
