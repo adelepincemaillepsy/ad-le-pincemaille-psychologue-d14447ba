@@ -173,8 +173,10 @@ function HomePage() {
 
             <div className="rounded-lg border border-accent/30 bg-accent/5 p-8">
               <h3 className="font-serif text-2xl text-foreground">Annulation</h3>
-              <p className="mt-4 text-sm leading-relaxed text-foreground/85">
+            <p className="mt-4 text-sm font-semibold leading-relaxed text-foreground/85">
                 Toute consultation non honorée ou annulée moins de 38h à l'avance reste due.
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/85">
                 Ce cadre me permet de vous accueillir dans de bonnes conditions et de
                 préserver un fonctionnement respectueux pour chacun·e. Merci pour votre
                 compréhension.
