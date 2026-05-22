@@ -54,7 +54,10 @@ function HomePage() {
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85">
               <p>
-                Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse. J'exerce en cabinet au pôle santé de Vendenheim, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires, tout en poursuivant une activité en institution, en psychiatrie adulte.
+                Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
+              </p>
+              <p>
+                J'exerce en cabinet au pôle santé de Vendenheim, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires, tout en poursuivant une activité en institution, en psychiatrie adulte.
               </p>
             </div>
           </div>
