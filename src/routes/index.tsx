@@ -143,10 +143,9 @@ function HomePage() {
             </div>
             <div className="rounded-lg border border-border/60 bg-secondary/40 p-8">
               <p className="text-xs uppercase tracking-[0.2em] text-accent">Dispositif</p>
-              <h3 className="mt-3 font-serif text-3xl text-foreground">Mon Soutien Étudiant</h3>
+              <h3 className="mt-3 font-serif text-3xl text-foreground">Mon Soutien Psy</h3>
               <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-                Je suis conventionnée dans le cadre du dispositif Mon Soutien Étudiant,
-                permettant aux étudiants de bénéficier de séances prises en charge.
+                Je ne suis pas sur la liste du dispositif Mon Soutien Psy.
               </p>
             </div>
           </div>
