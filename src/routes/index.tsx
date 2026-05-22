@@ -100,7 +100,7 @@ function HomePage() {
               J'accompagne en psychothérapie les adultes, les adolescents ainsi que les enfants à partir de 12 ans.
             </p>
             <p>
-              Les consultations s'adressent aux personnes qui ressentent le besoin d'entreprendre un travail thérapeutique, qu'elles traversent une période de mal-être, d'anxiété, de tristesse, de dépression ou de souffrance psychique, qu'elles soient confrontées à un événement traumatique ou à un sentiment plus diffus d'impasse ou de difficulté intérieure.
+              Les consultations s'adressent aux personnes qui ressentent le besoin d'entreprendre un travail thérapeutique, qu'elles traversent une période de mal-être, d'anxiété, de tristesse, de dépression ou de souffrance psychique, qu'elles soient confrontées à un événement traumatique ou à un sentiment plus diffus d'impasse.
             </p>
             <p>
               Lorsque certains symptômes ou difficultés prennent une place importante dans le quotidien et impactent la vie personnelle, affective, scolaire ou professionnelle, la psychothérapie peut offrir un espace de compréhension, d'apaisement et de changement.
