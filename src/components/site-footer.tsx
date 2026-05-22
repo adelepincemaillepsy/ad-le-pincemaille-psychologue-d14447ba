@@ -16,11 +16,16 @@ export function SiteFooter() {
           <div className="space-y-3 text-sm text-foreground/80">
             <p className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <span>Espace Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
+              <span>Pôle Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
             </p>
             <p className="flex items-center gap-3">
               <Phone className="h-4 w-4 shrink-0 text-accent" />
-              <span>(numéro pro)</span>
+              <a
+                href="tel:+33749217835"
+                className="hover:text-accent transition-colors"
+              >
+                07 49 21 78 35
+              </a>
             </p>
             <p className="flex items-center gap-3">
               <Mail className="h-4 w-4 shrink-0 text-accent" />
