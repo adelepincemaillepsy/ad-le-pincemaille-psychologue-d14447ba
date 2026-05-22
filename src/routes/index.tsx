@@ -148,7 +148,7 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <XCircle className="h-4 w-4" />
-                  Chèques non acceptés
+                  <strong>Chèques non acceptés</strong>
                 </li>
               </ul>
             </div>
