@@ -222,10 +222,10 @@ function HomePage() {
             <div className="mt-4 space-y-3 text-sm text-foreground/85">
               <p className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>Espace Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
+                <span>Pôle Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
               </p>
               <p>
-                Un parking de stationnement gratuit est disponible devant l'Espace Santé.
+                Un parking de stationnement gratuit est disponible devant le Pôle Santé.
               </p>
             </div>
           </div>
