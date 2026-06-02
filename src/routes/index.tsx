@@ -2,8 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, CreditCard, Banknote, XCircle } from "lucide-react";
 import portrait from "@/assets/portrait-placeholder.jpg";
 import heroTexture from "@/assets/hero-texture.jpg";
-import cabinetInterior from "@/assets/cabinet-interior.jpg";
-import cabinetExterior from "@/assets/cabinet-exterior.jpg";
+import cabinetInteriorAsset from "@/assets/cabinet-bureau.jpeg.asset.json";
+import cabinetExteriorAsset from "@/assets/cabinet-exterieur.jpeg.asset.json";
+const cabinetInterior = cabinetInteriorAsset.url;
+const cabinetExterior = cabinetExteriorAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
