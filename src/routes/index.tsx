@@ -48,7 +48,7 @@ function HomePage() {
       <section id="presentation" className="container-narrow py-20 sm:py-28 scroll-mt-24">
         <div className="grid gap-14 md:grid-cols-2 md:items-center">
           <div className="order-2 md:order-1 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-accent">Présentation</p>
+            
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
               Présentation
             </h2>
