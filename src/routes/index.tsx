@@ -165,9 +165,7 @@ function HomePage() {
                 Toute consultation non honorée ou annulée moins de 24h à l'avance reste due.
               </p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                Ce cadre me permet de vous accueillir dans de bonnes conditions et de
-                préserver un fonctionnement respectueux pour chacun·e. Merci pour votre
-                compréhension.
+                En cas d'empêchement, merci de me prévenir dès que possible afin de préserver le bon déroulement des consultations.
               </p>
             </div>
           </div>
