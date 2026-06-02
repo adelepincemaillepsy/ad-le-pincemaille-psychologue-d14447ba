@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Phone, CalendarCheck } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone, CalendarCheck, CheckCircle2 } from "lucide-react";
+
+type SelectedSlot = { date: Date; time: string };
+type SubmittedInfo = { name: string; email: string; phone: string; message: string };
 
 export const Route = createFileRoute("/rendez-vous")({
   head: () => ({
@@ -67,7 +70,8 @@ function RendezVousPage() {
     const now = new Date();
     return startOfWeek(now < OPENING_DATE ? OPENING_DATE : now);
   });
-  const [selected, setSelected] = useState<{ date: Date; time: string } | null>(null);
+  const [selected, setSelected] = useState<SelectedSlot | null>(null);
+  const [submitted, setSubmitted] = useState<SubmittedInfo | null>(null);
 
   const days = useMemo(
     () => Array.from({ length: 7 }, (_, i) => addDays(weekStart, i)),
@@ -214,40 +218,17 @@ function RendezVousPage() {
         </div>
       </div>
 
-      {/* Récap sélection */}
+      {/* Récap sélection + formulaire de coordonnées */}
       {selected && (
-        <div className="mt-8 mx-auto max-w-2xl rounded-lg border border-accent/40 bg-accent/5 p-6">
-          <div className="flex items-start gap-4">
-            <div className="rounded-full bg-accent/15 p-3">
-              <CalendarCheck className="h-5 w-5 text-accent" />
-            </div>
-            <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.2em] text-accent">Créneau sélectionné</p>
-              <p className="mt-2 font-serif text-2xl text-foreground">
-                {DAY_LABELS[(selected.date.getDay() + 6) % 7]}{" "}
-                {selected.date.getDate()} {MONTH_LABELS[selected.date.getMonth()]} à{" "}
-                {selected.time}
-              </p>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Pour confirmer ce rendez-vous, contactez-moi par téléphone ou par email.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:adelepincemaille.psy@gmail.com?subject=Demande de rendez-vous&body=Bonjour, je souhaiterais confirmer le créneau du ${DAY_LABELS[(selected.date.getDay() + 6) % 7]} ${selected.date.getDate()} ${MONTH_LABELS[selected.date.getMonth()]} à ${selected.time}.`}
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
-                >
-                  Confirmer par email
-                </a>
-                <a
-                  href="tel:+33749217835"
-                  className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-                >
-                  07 49 21 78 35
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BookingForm
+          selected={selected}
+          submitted={submitted}
+          onSubmit={setSubmitted}
+          onReset={() => {
+            setSelected(null);
+            setSubmitted(null);
+          }}
+        />
       )}
 
       <p className="mt-12 text-center text-xs text-muted-foreground italic max-w-xl mx-auto">
@@ -256,5 +237,177 @@ function RendezVousPage() {
         espace administrateur.
       </p>
     </section>
+  );
+}
+
+function BookingForm({
+  selected,
+  submitted,
+  onSubmit,
+  onReset,
+}: {
+  selected: SelectedSlot;
+  submitted: SubmittedInfo | null;
+  onSubmit: (info: SubmittedInfo) => void;
+  onReset: () => void;
+}) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  const dateLabel = `${DAY_LABELS[(selected.date.getDay() + 6) % 7]} ${selected.date.getDate()} ${MONTH_LABELS[selected.date.getMonth()]}`;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmedEmail = email.trim();
+    const trimmedPhone = phone.trim();
+    const trimmedName = name.trim();
+    if (!trimmedName) return setError("Merci d'indiquer votre nom.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail))
+      return setError("Adresse email invalide.");
+    if (trimmedPhone.replace(/\D/g, "").length < 8)
+      return setError("Numéro de téléphone invalide.");
+    setError(null);
+    onSubmit({
+      name: trimmedName,
+      email: trimmedEmail,
+      phone: trimmedPhone,
+      message: message.trim(),
+    });
+  };
+
+  if (submitted) {
+    const mailtoBody = encodeURIComponent(
+      `Bonjour,\n\nDemande de rendez-vous pour le ${dateLabel} à ${selected.time}.\n\nNom : ${submitted.name}\nEmail : ${submitted.email}\nTéléphone : ${submitted.phone}\n${submitted.message ? `\nMessage :\n${submitted.message}\n` : ""}`,
+    );
+    return (
+      <div className="mt-8 mx-auto max-w-2xl rounded-lg border border-accent/40 bg-accent/5 p-6">
+        <div className="flex items-start gap-4">
+          <div className="rounded-full bg-accent/15 p-3">
+            <CheckCircle2 className="h-5 w-5 text-accent" />
+          </div>
+          <div className="flex-1">
+            <p className="text-xs uppercase tracking-[0.2em] text-accent">Demande enregistrée</p>
+            <p className="mt-2 font-serif text-2xl text-foreground">
+              {dateLabel} à {selected.time}
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Merci {submitted.name}. Je vous recontacte rapidement au {submitted.phone} ou par
+              email à <span className="text-foreground">{submitted.email}</span> pour confirmer ce
+              rendez-vous.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a
+                href={`mailto:adelepincemaille.psy@gmail.com?subject=${encodeURIComponent(`Demande de rendez-vous — ${submitted.name}`)}&body=${mailtoBody}`}
+                className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              >
+                M'envoyer la demande par email
+              </a>
+              <button
+                onClick={onReset}
+                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+              >
+                Choisir un autre créneau
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="mt-8 mx-auto max-w-2xl rounded-lg border border-accent/40 bg-accent/5 p-6"
+    >
+      <div className="flex items-start gap-4">
+        <div className="rounded-full bg-accent/15 p-3">
+          <CalendarCheck className="h-5 w-5 text-accent" />
+        </div>
+        <div className="flex-1">
+          <p className="text-xs uppercase tracking-[0.2em] text-accent">Créneau sélectionné</p>
+          <p className="mt-2 font-serif text-2xl text-foreground">
+            {dateLabel} à {selected.time}
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Renseignez vos coordonnées pour que je puisse vous confirmer ce rendez-vous et
+            vous envoyer un rappel.
+          </p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <label className="block">
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Nom</span>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                maxLength={100}
+                className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/40"
+              />
+            </label>
+            <label className="block">
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Téléphone</span>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+                maxLength={30}
+                className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/40"
+              />
+            </label>
+            <label className="block sm:col-span-2">
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Email</span>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                maxLength={255}
+                className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/40"
+              />
+            </label>
+            <label className="block sm:col-span-2">
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                Message (facultatif)
+              </span>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={3}
+                maxLength={1000}
+                className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/40"
+              />
+            </label>
+          </div>
+
+          {error && (
+            <p className="mt-3 text-sm text-destructive" role="alert">
+              {error}
+            </p>
+          )}
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+            >
+              Valider mes coordonnées
+            </button>
+            <button
+              type="button"
+              onClick={onReset}
+              className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            >
+              Annuler
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
   );
 }
