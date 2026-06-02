@@ -128,7 +128,7 @@ function HomePage() {
               <p className="mt-4 font-serif text-5xl text-foreground">
                 60 <span className="text-2xl text-muted-foreground">€</span>
               </p>
-              <p className="mt-3 text-sm text-muted-foreground">Séance d'environ 45 minutes.</p>
+              <p className="mt-3 text-sm text-muted-foreground">La durée des séances peut varier selon la situation clinique et les besoins du patient.</p>
             </div>
             <div className="rounded-lg border border-border/60 bg-secondary/40 p-8">
               <p className="text-xs uppercase tracking-[0.2em] text-accent">Dispositif</p>
