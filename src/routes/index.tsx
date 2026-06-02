@@ -37,7 +37,7 @@ function HomePage() {
             Un espace de parole,<br />
             <em className="text-accent not-italic">d'écoute et de soin.</em>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed text-lg">
+          <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed text-xl">
             <span className="font-semibold text-foreground">Adèle Pincemaille</span>, <span className="font-semibold text-foreground">psychologue clinicienne</span>.<br />
             Accompagnement des adultes, adolescents et enfants à partir de 12 ans.
           </p>
