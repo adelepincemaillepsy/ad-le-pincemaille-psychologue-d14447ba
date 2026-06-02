@@ -214,40 +214,17 @@ function RendezVousPage() {
         </div>
       </div>
 
-      {/* Récap sélection */}
+      {/* Récap sélection + formulaire de coordonnées */}
       {selected && (
-        <div className="mt-8 mx-auto max-w-2xl rounded-lg border border-accent/40 bg-accent/5 p-6">
-          <div className="flex items-start gap-4">
-            <div className="rounded-full bg-accent/15 p-3">
-              <CalendarCheck className="h-5 w-5 text-accent" />
-            </div>
-            <div className="flex-1">
-              <p className="text-xs uppercase tracking-[0.2em] text-accent">Créneau sélectionné</p>
-              <p className="mt-2 font-serif text-2xl text-foreground">
-                {DAY_LABELS[(selected.date.getDay() + 6) % 7]}{" "}
-                {selected.date.getDate()} {MONTH_LABELS[selected.date.getMonth()]} à{" "}
-                {selected.time}
-              </p>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Pour confirmer ce rendez-vous, contactez-moi par téléphone ou par email.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <a
-                  href={`mailto:adelepincemaille.psy@gmail.com?subject=Demande de rendez-vous&body=Bonjour, je souhaiterais confirmer le créneau du ${DAY_LABELS[(selected.date.getDay() + 6) % 7]} ${selected.date.getDate()} ${MONTH_LABELS[selected.date.getMonth()]} à ${selected.time}.`}
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
-                >
-                  Confirmer par email
-                </a>
-                <a
-                  href="tel:+33749217835"
-                  className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-                >
-                  07 49 21 78 35
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <BookingForm
+          selected={selected}
+          submitted={submitted}
+          onSubmit={setSubmitted}
+          onReset={() => {
+            setSelected(null);
+            setSubmitted(null);
+          }}
+        />
       )}
 
       <p className="mt-12 text-center text-xs text-muted-foreground italic max-w-xl mx-auto">
