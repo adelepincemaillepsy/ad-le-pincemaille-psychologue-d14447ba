@@ -57,10 +57,10 @@ function HomePage() {
                 Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
               </p>
               <p>
-                Je propose des consultations de psychothérapie à mon cabinet et réalise des examens psychologiques judiciaires, tout en poursuivant une activité à l'hôpital psychiatrique (EPSAN), au sein d'une équipe mobile intervenant auprès de personnes en situation de précarité.
+                Je propose des consultations de psychothérapie à mon cabinet et réalise des examens psychologiques judiciaires. J'exerce également à l'hôpital psychiatrique (EPSAN), au sein d'une équipe mobile intervenant auprès des personnes en situation précarité.
               </p>
               <p>
-                Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie auprès d'adolescents et d'adultes, nourrissent aujourd'hui ma pratique clinique.
+                Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie auprès de personnes adultes, nourrissent aujourd'hui ma pratique clinique.
               </p>
               <p>
                 Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
