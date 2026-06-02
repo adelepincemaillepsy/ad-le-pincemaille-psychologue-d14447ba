@@ -70,7 +70,8 @@ function RendezVousPage() {
     const now = new Date();
     return startOfWeek(now < OPENING_DATE ? OPENING_DATE : now);
   });
-  const [selected, setSelected] = useState<{ date: Date; time: string } | null>(null);
+  const [selected, setSelected] = useState<SelectedSlot | null>(null);
+  const [submitted, setSubmitted] = useState<SubmittedInfo | null>(null);
 
   const days = useMemo(
     () => Array.from({ length: 7 }, (_, i) => addDays(weekStart, i)),
