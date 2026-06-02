@@ -150,11 +150,11 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Banknote className="h-4 w-4 text-accent" />
-                  Espèces acceptées
+                  Espèce acceptée
                 </li>
                 <li className="flex items-center gap-3 text-muted-foreground">
                   <XCircle className="h-4 w-4" />
-                  <strong>Chèques non acceptés</strong>
+                  <strong>Chèque non accepté</strong>
                 </li>
               </ul>
             </div>
