@@ -52,7 +52,7 @@ function HomePage() {
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
               Présentation
             </h2>
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85">
+            <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
               <p>
                 Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
               </p>
