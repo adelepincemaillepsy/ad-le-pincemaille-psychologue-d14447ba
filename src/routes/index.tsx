@@ -214,6 +214,9 @@ function HomePage() {
                 <span>Pôle Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
               </p>
               <p>
+                Mon bureau se situe au premier étage. Un monte-personne est disponible au sein du pôle santé pour les personnes à mobilité réduite.
+              </p>
+              <p>
                 Un parking de stationnement gratuit est disponible devant le Pôle Santé.
               </p>
             </div>
