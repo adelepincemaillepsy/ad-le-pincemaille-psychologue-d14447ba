@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Phone, CalendarCheck } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone, CalendarCheck, CheckCircle2 } from "lucide-react";
+
+type SelectedSlot = { date: Date; time: string };
+type SubmittedInfo = { name: string; email: string; phone: string; message: string };
 
 export const Route = createFileRoute("/rendez-vous")({
   head: () => ({
