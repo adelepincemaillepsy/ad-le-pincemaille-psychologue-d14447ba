@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, CreditCard, Banknote, XCircle } from "lucide-react";
-import portrait from "@/assets/portrait-placeholder.jpg";
 import heroTexture from "@/assets/hero-texture.jpg";
 import cabinetInteriorAsset from "@/assets/cabinet-bureau.jpeg.asset.json";
 import cabinetExteriorAsset from "@/assets/cabinet-exterieur.jpeg.asset.json";
@@ -48,40 +47,22 @@ function HomePage() {
 
       {/* Présentation */}
       <section id="presentation" className="container-narrow py-20 sm:py-28 scroll-mt-24">
-        <div className="grid gap-14 md:grid-cols-2 md:items-center">
-          <div className="order-2 md:order-1 text-center">
-            
-            <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
-              Présentation
-            </h2>
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
-              <p>
-                Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
-              </p>
-              <p>
-                Je propose des consultations de psychothérapie à mon cabinet et réalise des examens psychologiques judiciaires. J'exerce également à l'hôpital psychiatrique (EPSAN), au sein d'une équipe mobile intervenant auprès des personnes en situation précarité.
-              </p>
-              <p>
-                Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie auprès de personnes adultes, nourrissent aujourd'hui ma pratique clinique.
-              </p>
-              <p>
-                Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
-              </p>
-            </div>
-          </div>
-          <div className="order-1 md:order-2 mx-auto w-full max-w-[260px] md:max-w-[300px]">
-            <div className="relative">
-              <div className="absolute -inset-3 -z-10 rounded-lg bg-accent/15 translate-x-3 translate-y-3" />
-              <img
-                src={portrait}
-                alt="Adèle Pincemaille, psychologue clinicienne"
-                width={896}
-                height={1152}
-                className="w-full rounded-lg object-cover shadow-sm"
-              />
-            </div>
-            <p className="mt-3 text-center text-xs text-muted-foreground italic">
-              [Remplacer par votre photo professionnelle]
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
+            Présentation
+          </h2>
+          <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
+            <p>
+              Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
+            </p>
+            <p>
+              Je propose des consultations de psychothérapie à mon cabinet et réalise des examens psychologiques judiciaires. J'exerce également à l'hôpital psychiatrique (EPSAN), au sein d'une équipe mobile intervenant auprès des personnes en situation précarité.
+            </p>
+            <p>
+              Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie auprès de personnes adultes, nourrissent aujourd'hui ma pratique clinique.
+            </p>
+            <p>
+              Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
             </p>
           </div>
         </div>
@@ -176,32 +157,22 @@ function HomePage() {
           <div className="mt-12">
             <h3 className="font-serif text-3xl text-foreground text-center">Le cabinet</h3>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-              <figure>
-                <img
-                  src={cabinetExterior}
-                  alt="Façade extérieure du cabinet"
-                  width={1536}
-                  height={1024}
-                  loading="lazy"
-                  className="w-full rounded-lg object-cover aspect-[4/3] shadow-sm"
-                />
-                <figcaption className="mt-2 text-center text-xs text-muted-foreground italic">
-                  Extérieur — [remplacer par votre photo]
-                </figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={cabinetInterior}
-                  alt="Intérieur du bureau de consultation"
-                  width={1536}
-                  height={1024}
-                  loading="lazy"
-                  className="w-full rounded-lg object-cover aspect-[4/3] shadow-sm"
-                />
-                <figcaption className="mt-2 text-center text-xs text-muted-foreground italic">
-                  Bureau de consultation — [remplacer par votre photo]
-                </figcaption>
-              </figure>
+              <img
+                src={cabinetExterior}
+                alt="Façade extérieure du cabinet"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                className="w-full rounded-lg object-cover aspect-[4/3] shadow-sm"
+              />
+              <img
+                src={cabinetInterior}
+                alt="Intérieur du bureau de consultation"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                className="w-full rounded-lg object-cover aspect-[4/3] shadow-sm"
+              />
             </div>
           </div>
 
