@@ -40,7 +40,7 @@ function HomePage() {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed text-xl">
             <span className="font-semibold text-foreground">Adèle Pincemaille</span>, <span className="font-semibold text-foreground">psychologue clinicienne</span>.<br />
-            Accompagnement des adultes, adolescents et enfants à partir de 12 ans.
+            Accompagnement des personnes âgées de plus de 12 ans.
           </p>
         </div>
       </section>
@@ -53,13 +53,13 @@ function HomePage() {
           </h2>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
             <p>
-              Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je me suis spécialisée en psychopathologie, psychologie clinique et psychanalyse.
+              Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je suis titulaire du Master II de Psychopathologie, psychologie clinique et psychanalyse.
             </p>
             <p>
-              Je propose des consultations de psychothérapie à mon cabinet et réalise des examens psychologiques judiciaires. J'exerce également à l'hôpital psychiatrique (EPSAN), au sein d'une équipe mobile intervenant auprès des personnes en situation précarité.
+              Une grande partie de ma pratique s’exerce en libéral, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires. En parallèle, je poursuis une activité à l’hôpital psychiatrique (EPSAN), au sein d’une équipe mobile accompagnant des personnes en situation de précarité.
             </p>
             <p>
-              Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie auprès de personnes adultes, nourrissent aujourd'hui ma pratique clinique.
+              Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie, nourrissent aujourd'hui ma pratique clinique.
             </p>
             <p>
               Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
@@ -78,13 +78,13 @@ function HomePage() {
 
           <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
             <p>
-              J'accompagne en psychothérapie les adultes, les adolescents ainsi que les enfants à partir de 12 ans.
+              J’accompagne en psychothérapie individuelle les personnes âgées de plus de 12 ans.
             </p>
             <p>
-              Les consultations s'adressent aux personnes qui ressentent le besoin d'entreprendre un travail thérapeutique, qu'elles traversent une période de mal-être, d'anxiété, de tristesse, de dépression ou de souffrance psychique, qu'elles soient confrontées à un événement traumatique ou à un sentiment plus diffus d'impasse.
+              Les consultations s’adressent à toute personne souhaitant engager une démarche de soin psychique, qu’elle traverse une période de mal-être, d’anxiété, de tristesse, de dépression ou toute autre forme de souffrance psychique, qu’elle soit confrontée à un événement traumatique ou à un sentiment plus diffus d’impasse.
             </p>
             <p>
-              Lorsque certains symptômes ou difficultés prennent une place importante dans le quotidien et impactent la vie personnelle, affective, scolaire ou professionnelle, la psychothérapie peut offrir un espace de compréhension, d'apaisement et de changement.
+              Lorsque certains symptômes ou difficultés prennent une place importante dans le quotidien et impactent la vie personnelle, affective, scolaire ou professionnelle, la psychothérapie peut offrir un espace de compréhension et d'apaisement.
             </p>
             <p>
               Je propose un cadre confidentiel, bienveillant et sans jugement, où la parole peut se déposer librement et où ce qui fait souffrance peut progressivement être mis en sens et travaillé.
@@ -144,11 +144,10 @@ function HomePage() {
 
             <div className="rounded-lg border border-accent/30 bg-accent/5 p-8">
               <h3 className="font-serif text-2xl text-foreground">Annulation</h3>
-            <p className="mt-4 text-sm font-semibold leading-relaxed text-foreground/85">
-                Toute consultation non honorée ou annulée moins de 24h à l'avance reste due.
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                En cas d'empêchement, merci de me prévenir dès que possible afin de préserver le bon déroulement des consultations.
+              <p className="mt-4 text-sm leading-relaxed text-foreground/85 whitespace-pre-line">
+                En cas d’empêchement ou d’annulation, merci de prévenir au moins 48h à l’avance afin de permettre à d’autres patients de disposer du créneau horaire.
+                {"\n\n"}
+                Toute absence d’annulation moins de 24h avant la consultation engage le paiement de la séance.
               </p>
             </div>
           </div>
@@ -185,7 +184,7 @@ function HomePage() {
                 <span>Pôle Santé<br />19 rue de la Forêt<br />67550 Vendenheim</span>
               </p>
               <p>
-                Mon bureau se situe au premier étage. Un monte-personne est disponible au sein du pôle santé pour les personnes à mobilité réduite.
+                Mon bureau se situe au premier étage. Un monte-personne est disponible au sein du Pôle Santé pour les personnes à mobilité réduite.
               </p>
               <p>
                 Un parking de stationnement gratuit est disponible devant le Pôle Santé.
