@@ -11,11 +11,11 @@ const adelePortrait = adelePortraitAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Adèle Pincemaille — Psychologue clinicienne à Vendenheim" },
+      { title: "Adèle PINCEMAILLE — Psychologue clinicienne à Vendenheim" },
       {
         name: "description",
         content:
-          "Adèle Pincemaille, psychologue clinicienne à Vendenheim. Présentation, public accompagné, tarifs et contact.",
+          "Adèle PINCEMAILLE, psychologue clinicienne à Vendenheim. Présentation, public accompagné, tarifs et contact.",
       },
     ],
   }),
@@ -41,8 +41,8 @@ function HomePage() {
             <em className="text-accent not-italic">d'écoute et de soin.</em>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed text-xl">
-            <span className="font-semibold text-foreground">Adèle Pincemaille</span>, <span className="font-semibold text-foreground">psychologue clinicienne</span>.<br />
-            Accompagnement des personnes âgées de plus de 12 ans.
+            <span className="font-semibold text-foreground">Adèle PINCEMAILLE</span>, <span className="font-semibold text-foreground">psychologue clinicienne</span>.<br />
+            Accompagnement des adultes, des adolescents et des enfants à partir de 12 ans.
           </p>
         </div>
       </section>
