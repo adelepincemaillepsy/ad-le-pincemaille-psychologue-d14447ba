@@ -67,6 +67,9 @@ function HomePage() {
             <p>
               Ma pratique s’inscrit dans le respect du Code de déontologie des psychologues, qui constitue le cadre éthique de mon travail.
             </p>
+            <p>
+              Je suis inscrite au Répertoire Partagé des Professionnels de Santé (RPPS) sous le n° 10009429126.
+            </p>
           </div>
         </div>
       </section>
