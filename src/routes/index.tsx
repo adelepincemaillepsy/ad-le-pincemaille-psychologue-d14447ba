@@ -40,7 +40,7 @@ function HomePage() {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground leading-relaxed text-xl">
             <span className="font-semibold text-foreground">Adèle Pincemaille</span>, <span className="font-semibold text-foreground">psychologue clinicienne</span>.<br />
-            Accompagnement des adultes, adolescents et enfants à partir de 12 ans.
+            Accompagnement des personnes âgées de plus de 12 ans.
           </p>
         </div>
       </section>
