@@ -3,8 +3,10 @@ import { MapPin, Phone, Mail, CreditCard, Banknote, XCircle } from "lucide-react
 import heroTexture from "@/assets/hero-texture.jpg";
 import cabinetInteriorAsset from "@/assets/cabinet-bureau.jpeg.asset.json";
 import cabinetExteriorAsset from "@/assets/cabinet-exterieur.jpeg.asset.json";
+import adelePortraitAsset from "@/assets/adele-portrait.jpg.asset.json";
 const cabinetInterior = cabinetInteriorAsset.url;
 const cabinetExterior = cabinetExteriorAsset.url;
+const adelePortrait = adelePortraitAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
