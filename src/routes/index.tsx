@@ -64,6 +64,9 @@ function HomePage() {
             <p>
               Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
             </p>
+            <p>
+              Ma pratique s’inscrit dans le respect du Code de déontologie des psychologues, qui constitue le cadre éthique de mon travail.
+            </p>
           </div>
         </div>
       </section>
