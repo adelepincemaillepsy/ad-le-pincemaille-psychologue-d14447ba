@@ -134,8 +134,10 @@ function HomePage() {
             <div className="rounded-lg border border-border/60 bg-secondary/40 p-8">
               <p className="text-xs uppercase tracking-[0.2em] text-accent">Dispositif</p>
               <h3 className="mt-3 font-serif text-3xl text-foreground">Prise en charge</h3>
-              <p className="mt-4 text-sm leading-relaxed text-foreground/80">
+              <p className="mt-4 text-sm leading-relaxed text-foreground/80 whitespace-pre-line">
                 Les consultations ne sont actuellement <strong>pas prises en charge</strong> dans le cadre des dispositifs Mon Soutien Psy et Santé Psy Étudiant.
+                {"\n\n"}
+                Néanmoins, elles peuvent parfois être prises en charge par votre complémentaire santé.
               </p>
             </div>
           </div>
