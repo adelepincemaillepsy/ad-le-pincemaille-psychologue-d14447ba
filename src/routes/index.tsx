@@ -3,8 +3,10 @@ import { MapPin, Phone, Mail, CreditCard, Banknote, XCircle } from "lucide-react
 import heroTexture from "@/assets/hero-texture.jpg";
 import cabinetInteriorAsset from "@/assets/cabinet-bureau.jpeg.asset.json";
 import cabinetExteriorAsset from "@/assets/cabinet-exterieur.jpeg.asset.json";
+import adelePortraitAsset from "@/assets/adele-portrait.jpg.asset.json";
 const cabinetInterior = cabinetInteriorAsset.url;
 const cabinetExterior = cabinetExteriorAsset.url;
+const adelePortrait = adelePortraitAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,29 +49,39 @@ function HomePage() {
 
       {/* Présentation */}
       <section id="presentation" className="container-narrow py-20 sm:py-28 scroll-mt-24">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
-            Présentation
-          </h2>
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
-            <p>
-              Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je suis titulaire du Master II de Psychopathologie, psychologie clinique et psychanalyse.
-            </p>
-            <p>
-              Une grande partie de ma pratique s’exerce en libéral, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires. En parallèle, je poursuis une activité à l’hôpital psychiatrique (EPSAN), au sein d’une équipe mobile accompagnant des personnes en situation de précarité.
-            </p>
-            <p>
-              Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie, nourrissent aujourd'hui ma pratique clinique.
-            </p>
-            <p>
-              Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
-            </p>
-            <p>
-              Ma pratique s’inscrit dans le respect du Code de déontologie des psychologues, qui constitue le cadre éthique de mon travail.
-            </p>
-            <p>
-              Je suis inscrite au Répertoire Partagé des Professionnels de Santé (RPPS) sous le n° 10009429126.
-            </p>
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-[1fr_minmax(280px,360px)] items-start">
+          <div>
+            <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-foreground">
+              Présentation
+            </h2>
+            <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
+              <p>
+                Psychologue clinicienne diplômée de l'Université de Strasbourg depuis 2023, je suis titulaire du Master II de Psychopathologie, psychologie clinique et psychanalyse.
+              </p>
+              <p>
+                Une grande partie de ma pratique s’exerce en libéral, où je propose des consultations de psychothérapie et réalise des examens psychologiques judiciaires. En parallèle, je poursuis une activité à l’hôpital psychiatrique (EPSAN), au sein d’une équipe mobile accompagnant des personnes en situation de précarité.
+              </p>
+              <p>
+                Mon parcours m'a également amenée à travailler en institution auprès d'adolescents en voie de radicalisation ainsi que dans le domaine de la protection de l'enfance. Ces expériences, complétées par ma pratique en psychiatrie, nourrissent aujourd'hui ma pratique clinique.
+              </p>
+              <p>
+                Afin de proposer un accompagnement ajusté à chaque personne que je reçois, mon travail s'appuie également sur une analyse personnelle et une supervision régulière.
+              </p>
+              <p>
+                Ma pratique s’inscrit dans le respect du Code de déontologie des psychologues, qui constitue le cadre éthique de mon travail.
+              </p>
+              <p>
+                Je suis inscrite au Répertoire Partagé des Professionnels de Santé (RPPS) sous le n° 10009429126.
+              </p>
+            </div>
+          </div>
+          <div className="lg:sticky lg:top-24 mx-auto w-full max-w-xs lg:max-w-none">
+            <img
+              src={adelePortrait}
+              alt="Portrait d'Adèle Pincemaille, psychologue clinicienne"
+              className="w-full h-auto rounded-lg object-cover shadow-lg"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
