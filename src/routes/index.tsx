@@ -96,7 +96,7 @@ function HomePage() {
 
           <div className="mt-16 rounded-lg border border-border/60 bg-secondary/40 p-8 sm:p-10 space-y-5 text-base leading-relaxed text-foreground/85 text-justify">
             <p>
-              J’accompagne en psychothérapie individuelle les personnes âgées de plus de 12 ans.
+              J’accompagne en psychothérapie individuelle les personnes qui ont plus de 12 ans.
             </p>
             <p>
               Les consultations s’adressent à toute personne souhaitant engager une démarche de soin psychique, qu’elle traverse une période de mal-être, d’anxiété, de tristesse, de dépression ou toute autre forme de souffrance psychique, qu’elle soit confrontée à un événement traumatique ou à un sentiment plus diffus d’impasse.
